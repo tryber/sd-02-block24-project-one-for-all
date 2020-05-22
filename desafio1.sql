@@ -3,7 +3,8 @@ use SpotifyClone;
 
 create table plans (
 id int primary key auto_increment,
-plan varchar(50) not null
+plan varchar(50) not null,
+price double
 ) engine=InnoDB;
 
 create table users (
@@ -47,11 +48,10 @@ artist_id int,
 foreign key (artist_id) references artists(id)
 );
 
-
-insert into plans (plan) value
-('gratuito'),
-('familiar'),
-('universitario');
+insert into plans (plan, price) value
+('gratuito', 0),
+('familiar', 7.99),
+('universitario', 5.99);
 
 insert into users (user, age, plan_id) value
 ('Thati', 23, 1),
@@ -65,6 +65,7 @@ insert into musics (music) value
 ('Diamond Power'),
 ('Thang Of Thunder'),
 ('Home Forever'),
+('Words Of Her Life'),
 ('Refletions Of Magic'),
 ('Honey, Lets Be Silly'),
 ('Troubles Of my Inner Fire'),
@@ -75,7 +76,8 @@ insert into musics (music) value
 ('Honey, So Do I'),
 ('Sweetie, Lets Go Wild'),
 ('She Knows'),
-('Fantasy For Me');
+('Fantasy For Me'),
+('Rock His Everything');
 
 insert into artists (artist) value
 ('Walter Phoenix'),
