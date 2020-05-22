@@ -103,4 +103,3 @@ insert into users_follow_artist (user_id, artist_id) value
 (2, 1), (2, 3),
 (3, 4), (3, 1),
 (4, 2);
-
