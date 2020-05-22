@@ -6,7 +6,7 @@ DROP FUNCTION IF EXISTS quantidade_musicas_no_historico $$
 CREATE FUNCTION quantidade_musicas_no_historico(id_usuario INT)
 RETURNS INT READS SQL DATA
 BEGIN
-	DECLARE qtde_musicas INT;
+    DECLARE qtde_musicas INT;
     SELECT COUNT(musica_id)
     FROM historico_usuarios
     WHERE usuario_id = id_usuario

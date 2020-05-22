@@ -10,7 +10,7 @@ BEGIN
         art.artista_nome AS artista,
         al.album_id,
         al.album_nome AS album
-	FROM artistas art
+    FROM artistas art
     INNER JOIN albuns al ON art.artista_id = al.artista_id
     WHERE id_artista = art.artista_id;
 END $$
