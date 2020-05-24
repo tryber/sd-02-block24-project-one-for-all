@@ -11,10 +11,16 @@ CREATE TABLE Plans(
 CREATE TABLE Users(
     user_id INT PRIMARY KEY AUTO_INCREMENT,
     user_name VARCHAR(100),
-    Age INT,
+    Age INT
+) engine = InnoDB;
+
+CREATE TABLE UserPlan(
+    user_id INT,
     id_plan INT,
+	FOREIGN KEY (user_id)
+    REFERENCES Users (user_id) ON DELETE CASCADE,
     FOREIGN KEY (id_plan)
-    REFERENCES Plans (id_plan)
+    REFERENCES Plans (id_plan) ON DELETE CASCADE
 ) engine = InnoDB;
 
 CREATE TABLE Artists(
@@ -42,7 +48,7 @@ CREATE TABLE History(
     user_id INT,
     song_id INT,
     FOREIGN KEY (user_id)
-    REFERENCES Users (user_id),
+    REFERENCES Users (user_id) ON DELETE CASCADE,
     FOREIGN KEY (song_id)
     REFERENCES Songs (song_id)
 ) engine = InnoDB;
@@ -51,8 +57,8 @@ CREATE TABLE Followers(
     user_id INT,
     artist_id INT,
     FOREIGN KEY (user_id)
-    REFERENCES Users (user_id),
-    FOREIGN KEY (artist_id)
+    REFERENCES Users (user_id) ON DELETE CASCADE,
+    FOREIGN KEY (artist_id) 
     REFERENCES Artists (artist_id)
 ) engine = InnoDB;
 
@@ -64,10 +70,17 @@ VALUES
 
 INSERT INTO Users
 VALUES
-  (15, 'Thati', 23, 1),
-  (16, 'Cintia', 35, 3),
-  (17, 'Bill', 20, 2),
-  (18, 'Roger', 45, 1);
+  (15, 'Thati', 23),
+  (16, 'Cintia', 35),
+  (17, 'Bill', 20),
+  (18, 'Roger', 45);
+  
+INSERT INTO UserPlan
+VALUES
+  (15, 1),
+  (16, 3),
+  (17, 2),
+  (18, 1);
   
 INSERT INTO Artists (artist_name)
 VALUES
