@@ -18,9 +18,9 @@ CREATE TABLE UserPlan(
     user_id INT,
     id_plan INT,
     FOREIGN KEY (user_id)
-    REFERENCES Users (user_id) ON DELETE CASCADE,
+    REFERENCES Users (user_id),
     FOREIGN KEY (id_plan)
-    REFERENCES Plans (id_plan) ON DELETE CASCADE
+    REFERENCES Plans (id_plan)
 ) engine = InnoDB;
 
 CREATE TABLE Artists(
@@ -48,7 +48,7 @@ CREATE TABLE History(
     user_id INT,
     song_id INT,
     FOREIGN KEY (user_id)
-    REFERENCES Users (user_id) ON DELETE CASCADE,
+    REFERENCES Users (user_id),
     FOREIGN KEY (song_id)
     REFERENCES Songs (song_id)
 ) engine = InnoDB;
@@ -57,7 +57,7 @@ CREATE TABLE Followers(
     user_id INT,
     artist_id INT,
     FOREIGN KEY (user_id)
-    REFERENCES Users (user_id) ON DELETE CASCADE,
+    REFERENCES Users (user_id),
     FOREIGN KEY (artist_id) 
     REFERENCES Artists (artist_id)
 ) engine = InnoDB;
