@@ -16,70 +16,68 @@ subscription INT NOT NULL,
 FOREIGN KEY (subscription) REFERENCES subscriptions(id)
 );
 
-create table artists(
-id int primary key auto_increment,
-artist_name varchar(100) not null
+CREATE TABLE artists(
+id INT PRIMARY KEY AUTO_INCREMENT,
+artist_name VARCHAR(100) NOT NULL
 );
 
-create table user_follows(
-user_id int not null,
-artist_id int not null,
-primary key (user_id, artist_id)
+CREATE TABLE user_follows(
+user_id INT NOT NULL,
+artist_id INT NOT NULL,
+PRIMARY KEY (user_id, artist_id)
 );
 
-create table albums(
-id int primary key auto_increment,
-album_name varchar(100) not null,
-artist_id int not null,
-foreign key (artist_id) references artists(id)
+CREATE TABLE albums(
+id INT PRIMARY KEY AUTO_INCREMENT,
+album_name VARCHAR(100) NOT NULL,
+artist_id INT NOT NULL,
+FOREIGN KEY (artist_id) REFERENCES artists(id)
 );
 
-create table songs(
-id int primary key auto_increment,
-song_name varchar(100) not null,
-album_id int not null,
-foreign key (album_id) references albums(id)
+CREATE TABLE songs(
+id INT PRIMARY KEY AUTO_INCREMENT,
+song_name VARCHAR(100) NOT NULL,
+album_id INT NOT NULL,
+FOREIGN KEY (album_id) REFERENCES albums(id)
 );
 
-create table last_played(
-user_id int not null,
-song_id int not null,
-foreign key (user_id) references users(id),
-foreign key (song_id) references songs(id)
+CREATE TABLE last_played(
+user_id INT NOT NULL,
+song_id INT NOT NULL,
+FOREIGN KEY (user_id) REFERENCES users(id),
+FOREIGN KEY (song_id) REFERENCES songs(id)
 );
 
--- drop schema SpotifyClone;
-
-insert into subscriptions (subs_name, price)
-values
+INSERT INTO subscriptions (subs_name, price)
+VALUES
 ('Gratuito',	0),
 ('Familiar' , 7.99),
 ('Universitário', 5.99);
 
-insert into users (id, user_name, age, subscription)
-values
+INSERT INTO users (id, user_name, age, subscription)
+VALUES
 (15, 'Thati', 23, 1),
 (16, 'Cintia', 35, 2),
 (17, 'Bill', 20, 3),
 (18, 'Roger', 45, 1);
 
-insert into artists (artist_name)
-values
+INSERT INTO artists (artist_name)
+VALUES
 ('Walter Phoenix'),
 ('Peter Strong'),
 ('Lance Day'),
 ('Freedie Shannon');
 
-insert into albums (album_name, artist_id)
-values
+INSERT INTO albums (album_name, artist_id)
+VALUES
 ('Envious', 1),
 ('Exuberant', 1),
 ('Hallowed Steam', 2),
 ('Incadescent', 3),
 ('Temporary Culture', 4);
 
-insert into user_follows(user_id, artist_id)
-values
+INSERT INTO user_follows(user_id, artist_id)
+VALUES
 (15, 1),
 (15, 4),
 (15, 3),
@@ -89,8 +87,8 @@ values
 (17, 1),
 (18, 4);
 
-insert into songs(song_name, album_id)
-values
+INSERT INTO songs(song_name, album_id)
+VALUES
 ('Soul For Us', 1),
 ('Reflections Of Magic', 1),
 ('Dance With Her Own', 1),
@@ -110,8 +108,8 @@ values
 ('Words Of Her Life', 5),
 ('Without My Streets', 5);
 
-insert into last_played (user_id, song_id)
-values
+INSERT INTO last_played (user_id, song_id)
+VALUES
 (15, 1),
 (15, 6),
 (15, 14),
