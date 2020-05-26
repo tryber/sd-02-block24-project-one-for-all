@@ -5,3 +5,5 @@ SELECT COUNT(id) AS cancoes,
 (SELECT COUNT(id) FROM artists) AS artistas,
 (SELECT COUNT(id) FROM albums) AS albuns
 FROM songs;
+
+SELECT * FROM estatisticas_musicais;

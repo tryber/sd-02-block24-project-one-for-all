@@ -42,6 +42,7 @@ FOREIGN KEY (album_id) REFERENCES albums(id)
 );
 
 CREATE TABLE last_played(
+id INT PRIMARY KEY AUTO_INCREMENT,
 user_id INT NOT NULL,
 song_id INT NOT NULL,
 FOREIGN KEY (user_id) REFERENCES users(id),
