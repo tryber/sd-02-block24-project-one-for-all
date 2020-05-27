@@ -7,4 +7,3 @@ CREATE VIEW estatisticas_musicais AS
     FROM musicas mus
     CROSS JOIN artistas art
     CROSS JOIN albuns alb;
-
