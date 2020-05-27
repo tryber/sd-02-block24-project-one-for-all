@@ -11,7 +11,7 @@ CREATE TABLE plan(
 INSERT INTO
   plan(plan_name, price)
 VALUES
-  ('gratuito', 0),
+  ('gratuito', 0.00),
   ('universitário', 5.99),
   ('famíliar', 7.99);
 
