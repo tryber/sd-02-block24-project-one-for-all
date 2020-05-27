@@ -4,7 +4,7 @@ DELIMITER $$
 DROP TRIGGER IF EXISTS trigger_usuario_delete $$
 
 CREATE TRIGGER trigger_usuario_delete
-    AFTER DELETE ON usuarios
+    BEFORE DELETE ON usuarios
     FOR EACH ROW
 BEGIN
     DELETE FROM artistas_seguidores

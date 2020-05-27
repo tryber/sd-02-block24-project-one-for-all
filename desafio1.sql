@@ -20,10 +20,10 @@ CREATE TABLE IF NOT EXISTS usuarios_planos (
     PRIMARY KEY(usuario_id, plano_id),
     CONSTRAINT fk_usuarios_planos_usuarios FOREIGN KEY (usuario_id)
         REFERENCES usuarios (usuario_id)
-        ON DELETE CASCADE ON UPDATE CASCADE,
+        ON UPDATE CASCADE,
     CONSTRAINT fk_usuarios_planos_planos FOREIGN KEY (plano_id)
         REFERENCES planos (plano_id)
-        ON DELETE CASCADE ON UPDATE CASCADE
+        ON UPDATE CASCADE
 )  ENGINE=INNODB;
 
 CREATE TABLE IF NOT EXISTS artistas(
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS albuns(
     artista_id INT,
     CONSTRAINT fk_albuns_artistas FOREIGN KEY (artista_id)
         REFERENCES artistas (artista_id)
-        ON DELETE CASCADE ON UPDATE CASCADE
+        ON UPDATE CASCADE
 )ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS musicas(
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS musicas(
     album_id INT,
     CONSTRAINT fk_musicas_albuns FOREIGN KEY (album_id)
         REFERENCES albuns (album_id)
-        ON DELETE CASCADE ON UPDATE CASCADE
+        ON UPDATE CASCADE
 )ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS historico_usuarios(
@@ -54,10 +54,10 @@ CREATE TABLE IF NOT EXISTS historico_usuarios(
     musica_id INT,
     CONSTRAINT fk_historico_usuarios_usuarios FOREIGN KEY (usuario_id)
         REFERENCES usuarios (usuario_id)
-        ON DELETE CASCADE ON UPDATE CASCADE,
+        ON UPDATE CASCADE,
     CONSTRAINT fk_historico_usuarios_musicas FOREIGN KEY (musica_id)
         REFERENCES musicas (musica_id)
-        ON DELETE CASCADE ON UPDATE CASCADE
+        ON UPDATE CASCADE
 )ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS artistas_seguidores (
@@ -66,10 +66,10 @@ CREATE TABLE IF NOT EXISTS artistas_seguidores (
     PRIMARY KEY (artista_id, usuario_id),
     CONSTRAINT fk_artistas_seguidores_artistas FOREIGN KEY (artista_id)
         REFERENCES artistas (artista_id)
-        ON DELETE CASCADE ON UPDATE CASCADE,
+        ON UPDATE CASCADE,
     CONSTRAINT fk_artistas_seguidores_usuarios FOREIGN KEY (usuario_id)
         REFERENCES usuarios (usuario_id)
-        ON DELETE CASCADE ON UPDATE CASCADE
+        ON UPDATE CASCADE
 )  ENGINE=INNODB;
 
 INSERT INTO usuarios(usuario_nome, idade)
