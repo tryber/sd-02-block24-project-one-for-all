@@ -10,4 +10,3 @@ CREATE VIEW historico_reproducao_usuarios AS
             INNER JOIN
         musicas mus ON mus.id = h.musica_id
     ORDER BY usuario;
-
