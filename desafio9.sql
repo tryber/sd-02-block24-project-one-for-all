@@ -1,6 +1,7 @@
 USE SpotifyClone;
 
-DELIMITER $ $ CREATE PROCEDURE albuns_do_artista(IN id INT) BEGIN
+DELIMITER $$ 
+CREATE PROCEDURE albuns_do_artista(IN id INT) BEGIN
 SELECT
   a.id AS artista_id,
   a.artist_name AS artista,
@@ -13,4 +14,6 @@ FROM
 WHERE
   a.id = id;
 
-END $ $ DELIMITER;
+END $$
+DELIMITER ;
+
