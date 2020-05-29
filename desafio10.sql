@@ -1,15 +1,16 @@
 USE SpotifyClone;
 
 DELIMITER $$
-CREATE PROCEDURE quantidade_musicas_no_historico(IN idIn INT) BEGIN
+CREATE FUNCTION quantidade_musicas_no_historico(idIn INT)
+RETURNS INT READS SQL DATA BEGIN DECLARE value_history INT;
 SELECT
-  count(user_id) AS quantidade_musicas_no_historico
+  count(user_id)
 FROM
   reproduction_history
 WHERE
-  user_id = idIn;
-
+  user_id = idIn INTO value_history;
+	RETURN value_history;
 END $$
 DELIMITER ;
 
-CALL quantidade_musicas_no_historico(17);
+SELECT quantidade_musicas_no_historico(17) AS quantidade_musicas_no_historico;
