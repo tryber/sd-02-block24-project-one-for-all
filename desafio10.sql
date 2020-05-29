@@ -9,7 +9,7 @@ FROM
   reproduction_history
 WHERE
   user_id = idIn INTO value_history;
-	RETURN value_history;
+  RETURN value_history;
 END $$
 DELIMITER ;
 
