@@ -11,5 +11,5 @@ WHERE
   user_id = OLD.id;
 
   END $$
- 
+
 DELIMITER ;
