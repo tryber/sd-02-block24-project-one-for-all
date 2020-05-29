@@ -1,13 +1,16 @@
 USE SpotifyClone;
 
-CREATE VIEW faturamento_atual AS DELIMITER $ $ CREATE PROCEDURE mediaPlans(OUT media DOUBLE) BEGIN
+CREATE VIEW faturamento_atual AS 
+DELIMITER $$ 
+CREATE PROCEDURE mediaPlans(OUT media DOUBLE) BEGIN
 SELECT
   AVG(p.price) INTO media
 FROM
   plan AS p
   INNER JOIN users AS u ON u.plan_id = p.id;
 
-END $ $ DELIMITER;
+END $$ 
+DELIMITER ;
 
 CALL mediaPlans(@media_plan);
 
