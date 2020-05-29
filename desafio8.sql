@@ -15,6 +15,6 @@ BEGIN
     WHERE usuario_id = OLD.usuario_id;
 END $$
 
-DELIMITER $$
+DELIMITER ;
 
 DELETE FROM usuarios WHERE usuario_id = 15;
