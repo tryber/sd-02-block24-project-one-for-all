@@ -16,4 +16,3 @@ WHERE
 
 END $$
 DELIMITER ;
-
