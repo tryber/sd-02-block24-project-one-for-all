@@ -10,6 +10,6 @@ DELETE FROM
 WHERE
   user_id = OLD.id;
 
-END $$
+  END $$
  
 DELIMITER ;
