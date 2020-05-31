@@ -125,3 +125,14 @@ VALUES
 (18, 3),
 (18, 18),
 (18, 11);
+
+DELIMITER $$
+CREATE TRIGGER trigger_usuario_delete
+BEFORE DELETE ON users
+FOR EACH ROW
+BEGIN
+DELETE FROM user_follows where user_follows.user_id = OLD.id;
+DELETE FROM last_played where last_played.user_id = OLD.id;
+END; $$
+DELIMITER ;
+
