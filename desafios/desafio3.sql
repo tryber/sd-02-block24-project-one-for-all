@@ -7,4 +7,3 @@ INNER JOIN songs AS s ON s.id = l.song_id
 ORDER BY u.user_name;
 
 SELECT * FROM historico_reproducao_usuarios;
-
