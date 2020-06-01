@@ -135,4 +135,3 @@ DELETE FROM user_follows where user_follows.user_id = OLD.id;
 DELETE FROM last_played where last_played.user_id = OLD.id;
 END; $$
 DELIMITER ;
-
