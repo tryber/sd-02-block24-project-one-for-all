@@ -19,6 +19,13 @@ CREATE TABLE usuarios(
     FOREIGN KEY (plano_id) REFERENCES planos(plano_id)
 ) engine = InnoDB;
 
+
+CREATE TABLE usuarios_planos(
+	usuario_id INT NOT NULL,
+    plano_id INT NOT NULL,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
+    FOREIGN KEY (plano_id) REFERENCES planos(plano_id)
+) engine = InnoDB;
 CREATE TABLE artistas(
 	artista_id INT PRIMARY KEY auto_increment,
     artista VARCHAR(50) NOT NULL
@@ -66,28 +73,36 @@ INSERT INTO usuarios(usuario_id, usuario, idade, plano_id, plano)
 			 (16, "Cintia", 35, 2, "familiar"),
              (17, "Bill", 20, 3, "universitário"),
              (18, "Roger", 45, 1, "gratuito");
+             
+INSERT INTO usuarios_planos(usuario_id, plano_id)
+	VALUES (15, 1),
+		(16, 2),
+        (17, 3),
+        (18, 1);
               
 INSERT INTO artistas(artista)
 	VALUES ("Walter Phoenix"),
-			("Freedie Shannon"),
+			("Peter Strong"),
             ("Lance Day"),
-            ("Peter Strong");
+            ("Freedie Shannon");
+
             
 INSERT INTO albuns(album, artista_id, artista)
 	VALUES ("Envious", 1, "Walter Phoenix"),
 		   ("Exuberant", 1, "Walter Phoenix"),
-           ("Hallowed Steam", 4, "Peter Strong"),
+           ("Hallowed Steam", 2, "Peter Strong"),
            ("Incandescent", 3, "Lance Day"),
-           ("Temporary Culture", 2, "Freedie Shannon");
+           ("Temporary Culture", 4, "Freedie Shannon");
             
 INSERT INTO usuarios_artistas(usuario_id, usuario, artista_id, seguindo_artista)
        VALUES (15, "Thati", 1, "Walter Phoenix"),
-              (15, "Thati", 2, "Freedie Shannon"),
+              (15, "Thati", 4, "Freedie Shannon"),
               (15, "Thati", 3, "Lance Day"),
               (16, "Cintia", 1, "Walter Phoenix"),
               (16, "Cintia", 3, "Lance Day"),
 			  (17, "Bill", 1, "Walter Phoenix"),
-              (17, "Bill", 2, "Freedie Shannon");
+			  (17, "Bill", 2, "Peter Strong"),
+              (18, "Roger", 4, "Freedie Shannon");
               
 INSERT INTO cancoes(cancao, album_id)
 	VALUES ("Soul For US", 1),
@@ -124,3 +139,4 @@ INSERT INTO usuarios_historico_reproducao(usuario_id, usuario, historico_reprodu
                (18, "Roger", "Dance With Her Own"),
                (18, "Roger", "Without My Streets"),
                (18, "Roger", "Celebration Of More");
+               
