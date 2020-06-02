@@ -138,4 +138,3 @@ INSERT INTO usuarios_historico_reproducao(usuario_id, usuario, historico_reprodu
             (18, "Roger", "Dance With Her Own"),
             (18, "Roger", "Without My Streets"),
             (18, "Roger", "Celebration Of More");
-               
