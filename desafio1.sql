@@ -68,7 +68,7 @@ INSERT INTO planos(plano, valor_plano)
             ("universitário", 5.99);       
 
 INSERT INTO usuarios(usuario_id, usuario, idade, plano_id, plano)
-       VALUES (15, "Thati", 23, 1, "gratuito"),
+        VALUES (15, "Thati", 23, 1, "gratuito"),
             (16, "Cintia", 35, 2, "familiar"),
             (17, "Bill", 20, 3, "universitário"),
             (18, "Roger", 45, 1, "gratuito");
@@ -94,7 +94,7 @@ INSERT INTO albuns(album, artista_id, artista)
         ("Temporary Culture", 4, "Freedie Shannon");
             
 INSERT INTO usuarios_artistas(usuario_id, usuario, artista_id, seguindo_artista)
-       VALUES (15, "Thati", 1, "Walter Phoenix"),
+        VALUES (15, "Thati", 1, "Walter Phoenix"),
               (15, "Thati", 4, "Freedie Shannon"),
               (15, "Thati", 3, "Lance Day"),
               (16, "Cintia", 1, "Walter Phoenix"),
