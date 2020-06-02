@@ -9,6 +9,5 @@ CREATE VIEW perfil_artistas AS
     ON a.artista_id = ua.artista_id
     GROUP BY a.album_id, ua.seguindo_artista, ua.artista_id
     ORDER BY seguidores DESC;
-   
     
 SELECT * FROM perfil_artistas;

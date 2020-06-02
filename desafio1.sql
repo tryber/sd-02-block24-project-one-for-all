@@ -65,15 +65,14 @@ CREATE TABLE usuarios_historico_reproducao(
 INSERT INTO planos(plano, valor_plano)
     VALUES ("gratuito", 0),
             ("familiar", 7.99),
-            ("universitário", 5.99); 
-           
+            ("universitário", 5.99);       
 
 INSERT INTO usuarios(usuario_id, usuario, idade, plano_id, plano)
        VALUES (15, "Thati", 23, 1, "gratuito"),
-             (16, "Cintia", 35, 2, "familiar"),
-             (17, "Bill", 20, 3, "universitário"),
-             (18, "Roger", 45, 1, "gratuito");
-             
+            (16, "Cintia", 35, 2, "familiar"),
+            (17, "Bill", 20, 3, "universitário"),
+            (18, "Roger", 45, 1, "gratuito");
+            
 INSERT INTO usuarios_planos(usuario_id, plano_id)
     VALUES (15, 1),
         (16, 2),
@@ -89,10 +88,10 @@ INSERT INTO artistas(artista)
             
 INSERT INTO albuns(album, artista_id, artista)
     VALUES ("Envious", 1, "Walter Phoenix"),
-           ("Exuberant", 1, "Walter Phoenix"),
-           ("Hallowed Steam", 2, "Peter Strong"),
-           ("Incandescent", 3, "Lance Day"),
-           ("Temporary Culture", 4, "Freedie Shannon");
+        ("Exuberant", 1, "Walter Phoenix"),
+        ("Hallowed Steam", 2, "Peter Strong"),
+        ("Incandescent", 3, "Lance Day"),
+        ("Temporary Culture", 4, "Freedie Shannon");
             
 INSERT INTO usuarios_artistas(usuario_id, usuario, artista_id, seguindo_artista)
        VALUES (15, "Thati", 1, "Walter Phoenix"),
@@ -126,17 +125,17 @@ INSERT INTO cancoes(cancao, album_id)
             
 INSERT INTO usuarios_historico_reproducao(usuario_id, usuario, historico_reproducao)
         VALUES (15, "Thati", "Soul For Us"),
-               (15, "Thati", "Magic Circus"),
-               (15, "Thati", "Diamond Power"),
-               (15, "Thati", "Thang Of Thunder"),
-               (16, "Cintia", "Home Forever"),
-               (16, "Cintia", "Words Of Her Life"),
-               (16, "Cintia", "Reflections Of Magic"),
-               (16, "Cintia", "Honey,Let's Be Silly"),
-               (17, "Bill", "Troubles Of My Inner Fire"),
-               (17, "Bill", "Thang Of Thunder"),
-               (17, "Bill", "Magic Circus"),
-               (18, "Roger", "Dance With Her Own"),
-               (18, "Roger", "Without My Streets"),
-               (18, "Roger", "Celebration Of More");
+            (15, "Thati", "Magic Circus"),
+            (15, "Thati", "Diamond Power"),
+            (15, "Thati", "Thang Of Thunder"),
+            (16, "Cintia", "Home Forever"),
+            (16, "Cintia", "Words Of Her Life"),
+            (16, "Cintia", "Reflections Of Magic"),
+            (16, "Cintia", "Honey,Let's Be Silly"),
+            (17, "Bill", "Troubles Of My Inner Fire"),
+            (17, "Bill", "Thang Of Thunder"),
+            (17, "Bill", "Magic Circus"),
+            (18, "Roger", "Dance With Her Own"),
+            (18, "Roger", "Without My Streets"),
+            (18, "Roger", "Celebration Of More");
                
