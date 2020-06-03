@@ -68,6 +68,19 @@ CREATE TABLE historico_reproducao(
   FOREIGN KEY (cancao_id) REFERENCES cancoes(id)
 ) engine = InnoDB;
 
+DELIMITER $$
+
+CREATE TRIGGER trigger_usuario_delete 
+  BEFORE DELETE ON usuarios
+  FOR EACH ROW
+BEGIN
+  DELETE FROM historico_reproducao 
+  WHERE usuario_id = OLD.id;
+  DELETE FROM usuario_seguindo_artista
+  WHERE usuario_id = OLD.id;
+END $$
+DELIMITER ;
+
 INSERT INTO planos (id, nome_plano, valor) VALUES
   (1, 'gratuito', 0),
   (2, 'famíliar', 7.99),
@@ -107,7 +120,7 @@ INSERT INTO cancoes (id, nome_cancao) VALUES
   (12, 'Rock His Everything'),
   (13, 'Home Forever'),
   (14, 'Diamond Power'),
-  (15, 'Honey,Let\'s Be Silly'),
+  (15, 'Honey, Let\'s Be Silly'),
   (16, 'Thang Of Thunder'),
   (17, 'Words Of Her Life'),
   (18, 'Without My Streets');
