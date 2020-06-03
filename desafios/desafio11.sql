@@ -18,6 +18,6 @@ INNER JOIN
 WHERE
   plp.plan_id IN(2,3)
 GROUP BY
- nome
+  nome
 ORDER BY
- nome;
+  nome;
