@@ -53,6 +53,22 @@ CREATE TABLE album_artists(
   FOREIGN KEY(album_id) references albuns(id)
 ) engine = InnoDB;
 
+CREATE TABLE history(
+  user_id INT NOT NULL,
+  song_id INT NOT NULL,
+  PRIMARY KEY(user_id, song_id),
+  FOREIGN KEY(user_id) references users(id),
+  FOREIGN KEY(song_id) references songs(id)
+) engine = InnoDB;
+
+CREATE TABLE followers(
+  user_id INT NOT NULL,
+  artist_id INT NOT NULL,
+  PRIMARY KEY(user_id, artist_id),
+  FOREIGN KEY(user_id) references users(id),
+  FOREIGN KEY(artist_id) references artists(id)
+) engine = InnoDB;
+
 INSERT INTO
   users (user_name, user_age)
 VALUES
@@ -145,3 +161,21 @@ VALUES
   (4, 3),
   (3, 4),
   (2, 5);
+
+INSERT INTO
+  history (user_id, song_id)
+VALUES
+  (15,1),
+  (15,6),
+  (15,14),
+  (15,16),
+  (16,13),
+  (16,17),
+  (16,2),
+  (16,15),
+  (17,4),
+  (17,16),
+  (17,6),
+  (18,3),
+  (18,18),
+  (18,11);
