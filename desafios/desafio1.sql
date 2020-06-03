@@ -142,7 +142,7 @@ VALUES
   ("Rock His Everything"),
   ("Home Forever"),
   ("Diamond Power"),
-  ("Honey, Let's By Silly"),
+  ("Honey, Let's Be Silly"),
   ("Thang Of Thunder"),
   ("Words Of Her Life"),
   ("Without My Streets");
