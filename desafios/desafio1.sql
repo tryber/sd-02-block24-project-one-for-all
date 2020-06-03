@@ -117,35 +117,35 @@ VALUES
   (18, 1);
 
 INSERT INTO
-  albuns (album_name)
+  albuns (id, album_name)
 VALUES
-  ("Envious"),
-  ("Exuberant"),
-  ("Hallowed Steam"),
-  ("Incandescent"),
-  ("Temporary Culture");
+  (1, 'Envious'),
+  (2, 'Exuberant'),
+  (3, 'Hallowed Steam'),
+  (4, 'Incandescent'),
+  (5, 'Temporary Culture');
 
 INSERT INTO
-  songs (song_name)
+  songs (id, song_name)
 VALUES
-  ('Soul For Us'),
-  ('Reflections Of Magic'),
-  ('Dance With Her Own'),
-  ('Troubles Of My Inner Fire'),
-  ('Time Fireworks'),
-  ('Magic Circus'),
-  ('Honey, So Do I'),
-  ('Sweetie, Let\'s Go Wild'),
-  ('She Knows'),
-  ('Fantasy For Me'),
-  ('Celebration Of More'),
-  ('Rock His Everything'),
-  ('Home Forever'),
-  ('Diamond Power'),
-  ('Honey, Let\'s Be Silly'),
-  ('Thang Of Thunder'),
-  ('Words Of Her Life'),
-  ('Without My Streets');
+  (1, 'Soul For Us'),
+  (2, 'Reflections Of Magic'),
+  (3, 'Dance With Her Own'),
+  (4, 'Troubles Of My Inner Fire'),
+  (5, 'Time Fireworks'),
+  (6, 'Magic Circus'),
+  (7, 'Honey, So Do I'),
+  (8, 'Sweetie, Let\'s Go Wild'),
+  (9, 'She Knows'),
+  (10, 'Fantasy For Me'),
+  (11, 'Celebration Of More'),
+  (12, 'Rock His Everything'),
+  (13, 'Home Forever'),
+  (14, 'Diamond Power'),
+  (15, 'Honey, Let\'s Be Silly'),
+  (16, 'Thang Of Thunder'),
+  (17, 'Words Of Her Life'),
+  (18, 'Without My Streets');
 
 INSERT INTO
   albuns_songs (album_id, song_id)
@@ -174,9 +174,9 @@ INSERT INTO
 VALUES
   (1, 1),
   (1, 2),
-  (4, 3),
+  (2, 3),
   (3, 4),
-  (2, 5);
+  (4, 5);
 
 INSERT INTO
   history (user_id, song_id)

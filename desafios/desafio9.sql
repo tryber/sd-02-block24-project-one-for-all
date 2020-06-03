@@ -25,3 +25,5 @@ WHERE
 END $$
 
 DELIMITER ;
+
+CALL albuns_do_artista(1);
