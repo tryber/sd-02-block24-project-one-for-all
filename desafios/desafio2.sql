@@ -11,4 +11,4 @@ SELECT
   COUNT(DISTINCT alar.album_id) AS albuns
 FROM
   SpotifyClone.albuns_songs AS also
-  INNER JOIN SpotifyClone.album_artists AS alar ON also.album_id = alar.album_id;
+INNER JOIN SpotifyClone.album_artists AS alar ON also.album_id = alar.album_id;

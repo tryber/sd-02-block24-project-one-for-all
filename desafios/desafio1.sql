@@ -72,9 +72,9 @@ INSERT INTO
   artists (artist_name)
 VALUES
   ("Walter Phoenix"),
-  ("Freedie Shannon"),
+  ("Peter Strong"),
   ("Lance Day"),
-  ("Peter Strong");
+  ("Freedie Shannon");
 
 INSERT INTO
   plans_purchases (user_id, plan_id)
