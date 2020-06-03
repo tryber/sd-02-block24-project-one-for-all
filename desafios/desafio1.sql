@@ -128,24 +128,24 @@ VALUES
 INSERT INTO
   songs (song_name)
 VALUES
-  ("Soul For Us"),
-  ("Reflections Of Magic"),
-  ("Dance With Her Own"),
-  ("Troubles Of My Inner Fire"),
-  ("Time Fireworks"),
-  ("Magic Circus"),
-  ("Honey, So Do I"),
-  ("Sweetie, Let's Go Wild"),
-  ("He Knows"),
-  ("Fantasy For Me"),
-  ("Celebration Of More"),
-  ("Rock His Everything"),
-  ("Home Forever"),
-  ("Diamond Power"),
-  ("Honey, Let's Be Silly"),
-  ("Thang Of Thunder"),
-  ("Words Of Her Life"),
-  ("Without My Streets");
+  ('Soul For Us'),
+  ('Reflections Of Magic'),
+  ('Dance With Her Own'),
+  ('Troubles Of My Inner Fire'),
+  ('Time Fireworks'),
+  ('Magic Circus'),
+  ('Honey, So Do I'),
+  ('Sweetie, Let\'s Go Wild'),
+  ('She Knows'),
+  ('Fantasy For Me'),
+  ('Celebration Of More'),
+  ('Rock His Everything'),
+  ('Home Forever'),
+  ('Diamond Power'),
+  ('Honey, Let\'s Be Silly'),
+  ('Thang Of Thunder'),
+  ('Words Of Her Life'),
+  ('Without My Streets');
 
 INSERT INTO
   albuns_songs (album_id, song_id)
@@ -195,3 +195,15 @@ VALUES
   (18,3),
   (18,18),
   (18,11);
+
+INSERT INTO
+  followers (user_id, artist_id)
+VALUES
+  (15, 1),
+  (15, 4),
+  (15, 3),
+  (16, 1),
+  (16, 3),
+  (17, 2),
+  (17, 1),
+  (18, 4);
