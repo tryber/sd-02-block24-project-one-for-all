@@ -3,7 +3,7 @@
  primeira coluna e dê a essa coluna o apelido "cancoes".A segunda coluna deve exibir a quantidade de artistas,
  e deverá ter o apelido "artistas".A terceira coluna deve exibir a quantidade de álbuns,
  e deverá ter o apelido "albuns". */
- 
+
 CREATE VIEW estatisticas_musicais AS
 SELECT
   COUNT(DISTINCT also.song_id) AS cancoes,
