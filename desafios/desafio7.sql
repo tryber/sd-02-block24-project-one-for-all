@@ -18,9 +18,9 @@ SELECT
   (
     SELECT
       COUNT(fo.artist_id)
-	FROM
+	  FROM
       SpotifyClone.followers AS fo
-	WHERE
+	  WHERE
       fo.artist_id = art.id
   ) AS seguidores
 FROM
