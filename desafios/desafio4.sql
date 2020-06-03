@@ -16,5 +16,5 @@ FROM
 GROUP BY
   art.id
 ORDER BY
-  art.id
+  seguidores DESC
 LIMIT 3;
