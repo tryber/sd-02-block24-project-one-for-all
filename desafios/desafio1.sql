@@ -69,6 +69,22 @@ CREATE TABLE followers(
   FOREIGN KEY(artist_id) references artists(id)
 ) engine = InnoDB;
 
+DELIMITER $$
+
+CREATE TRIGGER trigger_usuario_delete
+  BEFORE DELETE ON users
+  FOR EACH ROW
+BEGIN
+  DELETE FROM plans_purchases
+  WHERE user_id = OLD.id;
+  DELETE FROM history
+  WHERE user_id = OLD.id;
+  DELETE FROM followers
+  WHERE user_id = OLD.id;
+END $$
+
+DELIMITER ;
+
 INSERT INTO
   users (user_name, user_age)
 VALUES
