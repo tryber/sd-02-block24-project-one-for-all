@@ -1,15 +1,15 @@
-use spotifyclone;
+use SpotifyClone;
 delimiter $$
-drop procedure if exists quantidade_musicas_no_historico  $$
+drop function if exists quantidade_musicas_no_historico  $$
 create function quantidade_musicas_no_historico (param int)
 returns int
 deterministic
-begin
+return (
 select
 count(*)
 from
-reproduction_history r
-where r.user_id = param
-group by user_id;
-end $$
-delimiter ;
+reproduction_history 
+where user_id = param
+group by user_id
+);
+$$ delimiter ;

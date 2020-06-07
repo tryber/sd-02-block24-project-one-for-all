@@ -1,4 +1,4 @@
-use spotifyclone;
+use SpotifyClone;
 
 delimiter $$
 

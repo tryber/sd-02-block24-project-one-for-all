@@ -1,4 +1,4 @@
-use spotifyclone;
+use SpotifyClone;
 create view historico_reproducao_usuarios as
 select
 user as usuario,

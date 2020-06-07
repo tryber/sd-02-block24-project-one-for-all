@@ -1,4 +1,4 @@
-use spotifyclone;
+use SpotifyClone;
 create view top_2_hits_do_momento as
 select
 music,

@@ -1,4 +1,4 @@
-use spotifyclone;
+use SpotifyClone;
 create view faturamento_atual as
 select
 min(price) as faturamento_minimo,

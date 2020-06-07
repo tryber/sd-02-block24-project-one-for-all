@@ -1,4 +1,4 @@
-use spotifyclone;
+use SpotifyClone;
 delimiter $$
 drop procedure if exists albuns_do_artista $$
 create procedure albuns_do_artista (in param int)

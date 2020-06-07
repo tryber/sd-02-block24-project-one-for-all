@@ -54,10 +54,10 @@ insert into plans (plan, price) value
 ('universitario', 5.99);
 
 insert into users (user, age, plan_id) value
-('Thati', 23, 1),
-('Cintia', 35, 2),
-('Bill', 20, 3),
-('Roger', 45, 1);
+('Thati', 23, 15),
+('Cintia', 35, 16),
+('Bill', 20, 17),
+('Roger', 45, 18);
 
 insert into musics (music) value
 ('Soul For Us'),
