@@ -13,3 +13,4 @@ where user_id = param
 group by user_id
 );
 $$ delimiter ;
+select quantidade_musicas_no_historico(3);

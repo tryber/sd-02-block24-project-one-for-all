@@ -14,3 +14,4 @@ inner join albums b on b.artist_id = a.id
 where artist_id = param;
 end $$
 delimiter ;
+call albuns_do_artista(1);
