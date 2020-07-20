@@ -9,4 +9,3 @@ CREATE VIEW estatisticas_musicais AS
         album_music AS am
             INNER JOIN
         album_artist AS a_a ON a_a.album_id = am.album_id;
-    
