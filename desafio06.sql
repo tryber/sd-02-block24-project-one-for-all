@@ -10,10 +10,9 @@ SELECT
 FROM
   plan AS p
   INNER JOIN users AS u ON u.plan_id = p.id;
-
 END $$ 
-DELIMITER ;
 
+DELIMITER ;
 CALL mediaPlans(@media_plan);
 
 SELECT
